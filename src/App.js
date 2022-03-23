@@ -9,34 +9,28 @@ import CryptoDetails from './components/CryptoDetails';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex">
       <Navbar />
-
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route exact path="/exchanges">
-          <Exchanges />
-        </Route>
-        <Route exact path="/cryptocurrencies">
-          <Cryptocurrencies />
-        </Route>
-        <Route exact path="/crypto/:coinId">
-          <CryptoDetails />
-        </Route>
-        <Route exact path="/news">
-          <News />
-        </Route>
-      </Switch>
-
-      <div className="footer">
-        <Link to="/">Home</Link>  
-        <Link to="/cryptocurrencies">Cryptocurrencies</Link>  
-        <Link to="/exchanges">Exchanges</Link>  
-        <Link to="/news">News</Link>  
+      <div className="main">
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/exchanges">
+            <Exchanges />
+          </Route>
+          <Route exact path="/cryptocurrencies">
+            <Cryptocurrencies />
+          </Route>
+          <Route exact path="/crypto/:coinId">
+            <CryptoDetails />
+          </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </div> 
   );
 }
 
